@@ -1,90 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Your Name - Personal Website</title>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    
-    <style>
-        body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #333; background-color: #fff; }
-        .navbar { margin-bottom: 30px; border-radius: 0; }
-        .profile-img { width: 100%; border-radius: 5px; margin-bottom: 20px; }
-        .news-item { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .news-date { font-weight: bold; color: #777; display: block; }
-        .social-links a { margin-right: 10px; text-decoration: none; font-weight: bold; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name</title>
+  <meta name="description" content="Personal academic website of Your Name." />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --site-max: 1100px;
+      --card-radius: 16px;
+    }
+    body{
+      background: #f7f8fa;
+    }
+    .site-wrap{
+      max-width: var(--site-max);
+    }
+    .profile-card{
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      position: sticky;
+      top: 86px; /* below navbar */
+    }
+    .profile-photo{
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #e9ecef;
+    }
+    .soft-card{
+      border-radius: var(--card-radius);
+    }
+    .section-card{
+      border-radius: var(--card-radius);
+    }
+    .section-title{
+      scroll-margin-top: 96px; /* offset for fixed navbar */
+    }
+    .news-date{
+      min-width: 120px;
+      font-weight: 600;
+      color: #6c757d;
+    }
+    .small-muted{
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+    .nav-link.active{
+      font-weight: 600;
+    }
+    footer{
+      color: #6c757d;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container site-wrap">
+      <a class="navbar-brand fw-semibold" href="#home">Your Name</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Your Name</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">Publications</a></li>
-                    <li><a href="#">CV</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-md-3">
-                <img src="https://via.placeholder.com/300x400" class="profile-img" alt="Profile Photo">
-                <h4><b>Your Name</b></h4>
-                <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
-                <p>Job Title / PhD Student<br>University / Company</p>
-                <div class="social-links">
-                    <a href="#">Google Scholar</a><br>
-                    <a href="#">GitHub</a><br>
-                    <a href="#">LinkedIn</a>
-                </div>
-            </div>
-
-            <div class="col-md-9">
-                <h2>About Me</h2>
-                <p>
-                    I am a [Your Profession] at [Your Place of Work]. 
-                    My research focuses on [Topic A], [Topic B], and [Topic C]. 
-                    I obtained my PhD from [University Name] under the supervision of [Advisor Name].
-                </p>
-                <p>
-                    Currently, I am working on [Current Project description]. My goal is to [Impact].
-                </p>
-
-                <hr>
-
-                <h2>News</h2>
-                <div class="news-item">
-                    <span class="news-date">January 2026</span>
-                    <p>Our paper "Title of the Awesome Paper" was accepted at [Conference Name]!</p>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">December 2025</span>
-                    <p>I started a new position as a Researcher at [Company Name].</p>
-                </div>
-            </div>
-
-        </div>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">Professional Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="assets/CV.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="#others">Others</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <footer class="container" style="margin-top: 50px; padding-bottom: 20px; color: #999;">
-        <hr>
-        <p>&copy; 2026 Your Name. Powered by <a href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>.</p>
-    </footer>
+  <!-- Page -->
+  <main class="container site-wrap my-4">
+    <div class="row g-4">
+      <!-- Left profile card -->
+      <aside class="col-12 col-lg-4">
+        <div class="card shadow-sm profile-card">
+          <img class="profile-photo" src="assets/profile.jpg" alt="Your portrait">
+          <div class="card-body">
+            <h1 class="h4 mb-1">Your Name</h1>
+            <div class="small-muted mb-3">Your Title · Your Organization</div>
 
+            <div class="mb-3">
+              <div><a href="mailto:you@domain.com">you@domain.com</a></div>
+              <div><a href="mailto:you2@domain.com">you2@domain.com</a></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold">Affiliation</div>
+              <div class="small-muted">Department / Lab</div>
+              <div class="small-muted">University / Institute</div>
+              <div class="small-muted">City, Country</div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-outline-secondary btn-sm" href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+              <a class="btn btn-outline-secondary btn-sm" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn-outline-secondary btn-sm" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn btn-outline-secondary btn-sm" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="small-muted">
+              Tip: put your CV at <code>assets/CV.pdf</code> and your photo at <code>assets/profile.jpg</code>.
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right content -->
+      <section class="col-12 col-lg-8">
+        <!-- Home / Intro -->
+        <div id="home" class="card shadow-sm section-card mb-4">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">Home</h2>
+
+            <p class="mb-2">
+              I am <strong>Your Name</strong>, a <strong>Your Role</strong> at
+              <a href="https://example.com" target="_blank" rel="noopener">Your Organization</a>.
+              Before joining, I was <strong>Previous Role</strong> working with
+              <a href="https://example.com" target="_blank" rel="noopener">Advisor Name</a>
+              at <a href="https://example.com" target="_blank" rel="noopener">University / Lab</a>.
+            </p>
+
+            <p class="mb-2">
+              I obtained my PhD in <strong>Your Field</strong> from <strong>Your University</strong>.
+              My research focuses on <strong>Theme A</strong>, <strong>Theme B</strong>, and <strong>Theme C</strong>.
+            </p>
+
+            <div class="alert alert-light border mt-3 mb-0">
+              <div class="fw-semibold mb-1">Research themes</div>
+              <div class="small-muted">
+                1) Domain Knowledge Integration · 2) Representation Learning & Synthetic Data · 3) Decision-making Agents
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research -->
+        <div id="research" class="card shadow-sm section-card mb-4">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">Research</h2>
+            <ul class="mb-0">
+              <li><strong>Topic 1:</strong> One-line description of your work.</li>
+              <li><strong>Topic 2:</strong> One-line description of your work.</li>
+              <li><strong>Topic 3:</strong> One-line description of your work.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div id="experience" class="card shadow-sm section-card mb-4">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">Experience</h2>
+            <ul class="mb-0">
+              <li><strong>2025–Present:</strong> Role, Organization</li>
+              <li><strong>2023–2025:</strong> Role, Organization</li>
+              <li><strong>2019–2023:</strong> Role, Organization</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Publications -->
+        <div id="publications" class="card shadow-sm section-card mb-4">
+        <div class="card-body">
+            <h2 class="h4 section-title mb-3">Publications</h2>
+
+            <div class="mb-3">
+            <a href="https://scholar.google.com/citations?user=gk-KtnkAAAAJ&hl=en"
+                target="_blank" rel="noopener">
+                View full list on Google Scholar
+            </a>
+            </div>
+
+            <ol class="mb-0">
+            <li>
+                <span class="text-muted">PhD Thesis Paper:</span>
+                <strong>Constructing Knowledge Graphs with Language Models and Learning Hierarchies from Graphs using Probabilistic Topic Modeling</strong>,
+                Sept. 2024
+            </li>
+
+            <li>
+                <span class="text-muted">Journal:</span>
+                <strong>Construction of Topic Hierarchy with Subtree Representation for Knowledge Graphs</strong>,
+                <em>Axioms</em> 2025, 14, 300, Apr. 2025
+                <a href="https://doi.org/10.3390/axioms14040300" target="_blank" rel="noopener">Link</a>
+            </li>
+
+            <li>
+                <strong>Fine-tuning Language Models for Triple Extraction with Data Augmentation</strong>,
+                Knowledge Graphs and Large Language Models (KaLLM) Workshop,
+                62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), Aug. 2024
+            </li>
+
+            <li>
+                <strong>Hierarchical Topic Models for Knowledge Graphs</strong>,
+                19th European Semantic Web Conference (ESWC 2022), Hersonissos, Greece, June 2022
+            </li>
+
+            <li>
+                <strong>Robust Object Tracking with Convolutional Gated Recurrent Networks</strong>,
+                International Symposium on Information Technology Convergence (ISITC 2017), Shijiazhuang, China, May 2017
+            </li>
+
+            <li>
+                <strong>Deep Residual Convolutional Network for Natural Image Denoising and Brightness Enhancement</strong>,
+                2018 International Conference on Platform Technology and Service (PlatCon-18), Jeju, Korea, May 2018
+            </li>
+
+            <li>
+                <strong>Object Tracking via Spatial-Temporal Learning Combined Correlation Filter</strong>,
+                Smart Media 2018, Seoul, Korea, Feb. 2018
+            </li>
+
+            <li>
+                <span class="text-muted">Master Thesis Paper:</span>
+                <strong>Efficient Correlation Matching-Based Real-Time Object Tracking with Spatiotemporal Information</strong>,
+                June 2018
+            </li>
+            </ol>
+        </div>
+        </div>
+
+
+        <!-- Professional Service -->
+        <div id="service" class="card shadow-sm section-card mb-4">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">Professional Service</h2>
+            <ul class="mb-0">
+              <li>Reviewer: Conference / Journal</li>
+              <li>Program Committee: Conference</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Teaching -->
+        <div id="teaching" class="card shadow-sm section-card mb-4">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">Teaching</h2>
+            <ul class="mb-0">
+              <li>Course name (Term, Role)</li>
+              <li>Course name (Term, Role)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- News -->
+        <div id="news" class="card shadow-sm section-card mb-4">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">News</h2>
+
+            <div class="d-grid gap-3">
+              <div class="d-flex gap-3">
+                <div class="news-date">Aug 13, 2025</div>
+                <div>Paper “Title here” accepted at <strong>Journal/Conference</strong>.</div>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="news-date">Jan 15, 2025</div>
+                <div>Workshop paper accepted at <strong>Venue</strong>.</div>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="news-date">Dec 20, 2024</div>
+                <div>Joined <strong>Organization</strong> as <strong>Role</strong>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <div id="resources" class="card shadow-sm section-card mb-4">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">Resources</h2>
+            <ul class="mb-0">
+              <li><a href="#">Slides</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">Datasets</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Others -->
+        <div id="others" class="card shadow-sm section-card">
+          <div class="card-body">
+            <h2 class="h4 section-title mb-3">Others</h2>
+            <p class="mb-0">Add hobbies, talks, blog posts, or anything else here.</p>
+          </div>
+        </div>
+
+        <footer class="mt-4 mb-2 small text-center">
+          © <span id="year"></span> Your Name · Built with Bootstrap
+        </footer>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Smooth scroll for internal anchors
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        // close navbar on mobile
+        const nav = document.getElementById("navMain");
+        if (nav.classList.contains("show")) new bootstrap.Collapse(nav).toggle();
+      });
+    });
+
+    // Active section highlighting
+    const sections = ["home","research","experience","publications","service","teaching","news","resources","others"]
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    const navLinks = Array.from(document.querySelectorAll(".navbar .nav-link"))
+      .filter(a => a.getAttribute("href") && a.getAttribute("href").startsWith("#"));
+
+    const obs = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+
+      const id = "#" + visible.target.id;
+      navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
+    }, { rootMargin: "-30% 0px -60% 0px", threshold: [0.1, 0.2, 0.3, 0.4] });
+
+    sections.forEach(s => obs.observe(s));
+  </script>
 </body>
 </html>
