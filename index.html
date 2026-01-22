@@ -70,26 +70,18 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" role="navigation" aria-label="Main navigation">
     <div class="container site-wrap">
-      <a class="navbar-brand fw-semibold" href="#home">Yujia Zhang</a>
+      <a class="navbar-brand fw-semibold" href="index.html">Yujia Zhang</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#service">Professional Service</a></li>
-          <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
-          <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Projects & Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Service & Awards</a></li>
           <li class="nav-item"><a class="nav-link" href="assets/CV.pdf" target="_blank" rel="noopener">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
-          <li class="nav-item"><a class="nav-link" href="#others">Others</a></li>
         </ul>
       </div>
     </div>
@@ -238,173 +230,6 @@
           </div>
         </div>
 
-        <!-- Experience -->
-        <div id="experience" class="card shadow-sm section-card mb-4">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Experience</h2>
-
-            <div class="mb-3">
-              <div class="d-flex justify-content-between flex-wrap gap-2">
-                <div class="fw-semibold">Machine Learning Resident · Amii</div>
-                <div class="small-muted">Mar 2025 – Present · Edmonton, Canada</div>
-              </div>
-              <ul class="mb-0">
-                <li>Delivered end-to-end LLM projects: client scoping, data analysis, scalable model building, actionable insights.</li>
-                <li>Developed a RAG system and exposed it via a Flask REST API; containerized with Docker for deployment consistency.</li>
-                <li>Translated research on agentic LLMs into practical, industry-ready applications.</li>
-              </ul>
-            </div>
-
-            <div class="mb-3">
-              <div class="d-flex justify-content-between flex-wrap gap-2">
-                <div class="fw-semibold">Data Analyst · Nanoprecise Sci Corp</div>
-                <div class="small-muted">May 2019 – Oct 2019 · Edmonton, Canada</div>
-              </div>
-              <ul class="mb-0">
-                <li>Performed EDA on sensor signal data for predictive maintenance; achieved ~95% failure detection accuracy using Random Forest.</li>
-                <li>Migrated and optimized firmware code to Python, improving pipeline efficiency and scalability.</li>
-                <li>Built dashboards/visualizations to communicate findings to technical and non-technical stakeholders.</li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="d-flex justify-content-between flex-wrap gap-2">
-                <div class="fw-semibold">R&amp;D Product Engineer · YUNGTAY Elevator Equipment (China)</div>
-                <div class="small-muted">May 2015 – Jul 2016 · Shanghai, China</div>
-              </div>
-              <ul class="mb-0">
-                <li>Led data collection and QA for elevator measurement data; ensured compliance with industry standards.</li>
-                <li>Conducted statistical analysis and quality control; authored 26 technical reports with recommendations.</li>
-                <li>Collaborated cross-functionally to resolve discrepancies and optimize product performance.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projects -->
-        <div id="projects" class="card shadow-sm section-card mb-4">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Projects</h2>
-
-            <div class="mb-3">
-              <div class="fw-semibold">Knowledge Graph Construction via Large Language Models (LLM)</div>
-              <div class="small-muted">University of Alberta · Jun 2023 – May 2024 · Edmonton, Canada</div>
-              <ul class="mb-0">
-                <li>Built an efficient system for constructing KGs from unstructured text by fine-tuning LLMs.</li>
-                <li>Designed a scalable deployment pipeline using Hugging Face Transformers; optimized inference for Llama 3 and Mistral (Autotrain workflow).</li>
-                <li>Developed scalable fine-tuning workflows; reduced training time by ~30% across diverse datasets (e.g., WebNLG, SKE).</li>
-                <li>Key finding: smaller ~7B models can match or exceed larger models on specific tasks (e.g., triple extraction).</li>
-              </ul>
-            </div>
-
-            <div class="mb-3">
-              <div class="fw-semibold">Hierarchical Analysis for Knowledge Graphs (KGs)</div>
-              <div class="small-muted">University of Alberta · May 2020 – Dec 2023 · Edmonton, Canada</div>
-              <ul class="mb-0">
-                <li>Developed a non-parametric hierarchical generative model for KGs via probabilistic topic modeling.</li>
-                <li>Implemented efficient Gibbs sampling in Python for scalable inference and improved performance.</li>
-                <li>Evaluated on standard datasets; produced results comparable to established hierarchical clustering approaches.</li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="fw-semibold">Object Detection and Tracking</div>
-              <div class="small-muted">Chonbuk National University · Aug 2016 – Aug 2018 · Jeonju, South Korea</div>
-              <ul class="mb-0">
-                <li>Researched Siamese networks, LSTM/CNN/RNN for tracking and recognition in TensorFlow/Python.</li>
-                <li>Improved tracking accuracy/robustness; increased mAP on benchmark datasets via architecture and training optimization.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Publications -->
-        <div id="publications" class="card shadow-sm section-card mb-4">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Publications</h2>
-
-            <div class="mb-3">
-              <a href="https://scholar.google.com/citations?user=gk-KtnkAAAAJ&hl=en" target="_blank" rel="noopener">
-                View full list on Google Scholar
-              </a>
-            </div>
-
-            <ol class="mb-0">
-              <li>
-                <span class="text-muted">PhD Thesis:</span>
-                <strong>Constructing Knowledge Graphs with Language Models and Learning Hierarchies from Graphs using Probabilistic Topic Modeling</strong>, Sept. 2024
-              </li>
-              <li>
-                <span class="text-muted">Journal:</span>
-                <strong>Construction of Topic Hierarchy with Subtree Representation for Knowledge Graphs</strong>,
-                <em>Axioms</em> 2025, 14, 300, Apr. 2025
-                <a href="https://doi.org/10.3390/axioms14040300" target="_blank" rel="noopener">Link</a>
-              </li>
-              <li>
-                <strong>Fine-tuning Language Models for Triple Extraction with Data Augmentation</strong>,
-                Knowledge Graphs and Large Language Models (KaLLM) Workshop,
-                ACL 2024, Aug. 2024
-              </li>
-              <li>
-                <strong>Hierarchical Topic Models for Knowledge Graphs</strong>,
-                ESWC 2022, Hersonissos, Greece, Jun. 2022
-              </li>
-              <li>
-                <strong>Robust Object Tracking with Convolutional Gated Recurrent Networks</strong>,
-                ISITC 2017, Shijiazhuang, China, May 2017
-              </li>
-              <li>
-                <strong>Deep Residual Convolutional Network for Natural Image Denoising and Brightness Enhancement</strong>,
-                PlatCon-18, Jeju, Korea, May 2018
-              </li>
-              <li>
-                <strong>Object Tracking via Spatial-Temporal Learning Combined Correlation Filter</strong>,
-                Smart Media 2018, Seoul, Korea, Feb. 2018
-              </li>
-              <li>
-                <span class="text-muted">Master Thesis:</span>
-                <strong>Efficient Correlation Matching-Based Real-Time Object Tracking with Spatiotemporal Information</strong>, Jun. 2018
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- Professional Service -->
-        <div id="service" class="card shadow-sm section-card mb-4">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Professional Service</h2>
-            <ul class="mb-0">
-              <li><strong>Publicity Chair:</strong> ICTAI 2022</li>
-              <!-- Add reviewer / PC roles here when you want -->
-            </ul>
-          </div>
-        </div>
-
-        <!-- Teaching -->
-        <div id="teaching" class="card shadow-sm section-card mb-4">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Teaching</h2>
-            <ul class="mb-0">
-              <li><strong>ECE 493</strong> Software Systems Design Project (TA) · Jan 2024 – Apr 2024</li>
-              <li><strong>ECE 627</strong> Intelligent Web (TA) · Jan 2023 – Apr 2023</li>
-              <li><strong>ECE 447</strong> Data Analysis and Machine Learning for Engineers (TA) · Jan 2023 – Apr 2023</li>
-              <li><strong>ENCMP 100</strong> Computer Programming for Engineers (TA) · Jan 2021 – Apr 2021</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Awards -->
-        <div id="awards" class="card shadow-sm section-card mb-4">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Awards</h2>
-            <ul class="mb-0">
-              <li><strong>J Gordin Kaplan Graduate Student Award</strong> · University of Alberta · Aug 2024</li>
-              <li><strong>Brain Korea 21 Scholarship</strong> · Aug 2017</li>
-              <li><strong>BECKHOFF Scholarship</strong> · Shanghai University of Engineering Science · Jul 2014</li>
-            </ul>
-          </div>
-        </div>
-
         <!-- News -->
         <div id="news" class="card shadow-sm section-card mb-4">
           <div class="card-body">
@@ -424,28 +249,6 @@
                 <div>Received <strong>J Gordin Kaplan Graduate Student Award</strong> (University of Alberta).</div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Resources -->
-        <div id="resources" class="card shadow-sm section-card mb-4">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Resources</h2>
-            <ul class="mb-0">
-              <li><a href="https://github.com/yujia0223" target="_blank" rel="noopener noreferrer">Code & Projects on GitHub</a></li>
-              <li><a href="https://scholar.google.com/citations?user=gk-KtnkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Publications & Citations</a></li>
-              <li><a href="assets/CV.pdf" target="_blank" rel="noopener">Curriculum Vitae (PDF)</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Others -->
-        <div id="others" class="card shadow-sm section-card">
-          <div class="card-body">
-            <h2 class="h4 section-title mb-3">Others</h2>
-            <p class="mb-0">
-              Add talks, volunteering, or personal interests here (e.g., TELUS World of Science volunteer, May 2024).
-            </p>
           </div>
         </div>
 
@@ -487,39 +290,6 @@
   <script>
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Smooth scroll for internal anchors
-    document.querySelectorAll('a.nav-link[href^="#"]').forEach(a => {
-      a.addEventListener("click", (e) => {
-        const id = a.getAttribute("href");
-        const el = document.querySelector(id);
-        if (!el) return;
-        e.preventDefault();
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        const nav = document.getElementById("navMain");
-        if (nav.classList.contains("show")) new bootstrap.Collapse(nav).toggle();
-      });
-    });
-
-    // Active section highlighting
-    const sections = ["home","skills","research","experience","projects","publications","service","teaching","awards","news","resources","others"]
-      .map(id => document.getElementById(id))
-      .filter(Boolean);
-
-    const navLinks = Array.from(document.querySelectorAll(".navbar .nav-link"))
-      .filter(a => a.getAttribute("href") && a.getAttribute("href").startsWith("#"));
-
-    const obs = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-
-      const id = "#" + visible.target.id;
-      navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
-    }, { rootMargin: "-30% 0px -60% 0px", threshold: [0.1, 0.2, 0.3, 0.4] });
-
-    sections.forEach(s => obs.observe(s));
   </script>
 </body>
 </html>
